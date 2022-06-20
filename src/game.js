@@ -372,10 +372,13 @@ var Game =
           { id: "nextQuestion", src: "img/arrowNext.png" },
           { id: "checkMarkSprite", src: "img/submitSprite.png" },
           { id: "closeButton", src: "img/exitYellowBtn.png" },
-          { id: "sceneBg", src: "img/sceneBg.png" },
-          { id: "sceneBg1", src: "img/sceneBg-1.png" },
+          { id: "sceneBg", src: "img/sceneBg.jpg" },
+          { id: "sceneBg1", src: "img/sceneBg-1.jpg" },
+          { id: "sceneBg2", src: "img/sceneBg-2.jpg" },
+          { id: "sceneBg3", src: "img/sceneBg-3.jpg" },
           { id: "title_background", src: "img/crosswordBackgroundTitle.png" },
           { id: "start_button", src: "img/playButton.png" },
+          { id: "next_button", src: "img/nextButton.png" },
           { id: "delete_button", src: "img/garbageCan.png" },
           // { id: "instructions_background", src: "img/instructions_background.png" },
           // { id: "instructions_question", src: "img/instructions_question.png" },
@@ -1335,7 +1338,7 @@ var Game =
         var gameOverContainer = new createjs.Container();
         // var background = new createjs.Shape();
         var background = new createjs.Bitmap(
-          resourceLoader.getResult("sceneBg")
+          resourceLoader.getResult("sceneBg2")
         );
         var gameOverBox = new createjs.Bitmap(
           resourceLoader.getResult("gameOverBox")
@@ -1438,7 +1441,7 @@ var Game =
         var gameOverContainer = new createjs.Container();
         // var background = new createjs.Shape();
         var background = new createjs.Bitmap(
-          resourceLoader.getResult("sceneBg1")
+          resourceLoader.getResult("sceneBg3")
         );
         var gameOverBox1 = new createjs.Bitmap(
           resourceLoader.getResult("gameOverBox")
@@ -3100,7 +3103,7 @@ var Game =
       function createTitleView1() {
         var view = new createjs.Container();
         var startButton = new createjs.Bitmap(
-          resourceLoader.getResult("start_button")
+          resourceLoader.getResult("next_button")
         );
         startButton.hitArea = new createjs.Shape(
           new createjs.Graphics().beginFill("#f00").drawRect(0, 0, 262, 79)
@@ -3145,7 +3148,7 @@ var Game =
       function createTitleView2() {
         var view = new createjs.Container();
         var startButton = new createjs.Bitmap(
-          resourceLoader.getResult("start_button")
+          resourceLoader.getResult("next_button")
         );
         startButton.hitArea = new createjs.Shape(
           new createjs.Graphics().beginFill("#f00").drawRect(0, 0, 262, 79)
@@ -5021,10 +5024,8 @@ var Game =
         views.pointsText.text = score + " pts.";
         console.log(score);
         if (score != 700) {
-          views.gameOverBox.alpha = 0.0;
           views.gameOverBox1.alpha = 1.0;
         } else {
-          views.gameOverBox1.alpha = 0.0;
           views.gameOverBox.alpha = 1.0;
         }
         if (!scoreSubmitted) {
