@@ -1462,7 +1462,7 @@ var Game =
           "30px Arial Black",
           "silver"
         );
-        var pointsText = new createjs.Text("", "34px Arial Black", "white");
+        var pointsText1 = new createjs.Text("", "34px Arial Black", "white");
         var restartText = new createjs.Text(
           "Start\nNew Game",
           "bold 14px Arial",
@@ -1491,21 +1491,21 @@ var Game =
         gameOverText.textAlign = "center";
         gameOverText.x = 295;
         gameOverText.y = 60;
-        pointsText.textAlign = "center";
-        pointsText.x = 295;
-        pointsText.y = 90;
+        pointsText1.textAlign = "center";
+        pointsText1.x = 295;
+        pointsText1.y = 90;
         restartText.textAlign = "center";
         restartText.x = 490;
         restartText.y = 148;
         reviewText.textAlign = "center";
         reviewText.x = 100;
         reviewText.y = 148;
-        views.pointsText = pointsText;
+        views.pointsText1 = pointsText1;
         gameOverContainer.addChild(
           gameOverBox1,
           gameOverHeaderText,
           gameOverText,
-          pointsText,
+          pointsText1,
           restartButton,
           reviewButton,
           restartText,
@@ -5022,6 +5022,7 @@ var Game =
         incorrectCellHilight(incorrectObj);
         correctCellHilight(correctObj);
         views.pointsText.text = score + " pts.";
+        views.pointsText1.text = score + " pts.";
         console.log(score);
         if (score != 700) {
           views.gameOverBox1.alpha = 1.0;
