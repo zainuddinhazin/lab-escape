@@ -111,7 +111,9 @@ var Game =
         miniTitleText: null,
         helpButton: null,
         pointsText: null,
+        pointsText1: null,
         gameOverBox: null,
+        gameOverBox1: null,
         gameView: null,
         returnButton: null,
         instructionView: null,
@@ -1012,7 +1014,8 @@ var Game =
             self.currentView.getChildAt(0).mouseEnabled = false;
             self.currentView.getChildAt(1).mouseEnabled = false;
             self.currentView.getChildAt(2).mouseEnabled = false;
-            self.currentView.getChildAt(3).mouseEnabled = true;
+            self.currentView.getChildAt(3).mouseEnabled = false;
+            self.currentView.getChildAt(4).mouseEnabled = true;
             views.textBoxInputControl.alpha = 0.0;
             views.textBoxInput.disabled = true;
             views.displayMessage.alpha = 1.0;
@@ -1023,8 +1026,10 @@ var Game =
           self.currentView.getChildAt(0).mouseEnabled = false;
           self.currentView.getChildAt(1).mouseEnabled = false;
           self.currentView.getChildAt(2).mouseEnabled = true;
-          self.currentView.getChildAt(3).mouseEnabled = false;
+          self.currentView.getChildAt(3).mouseEnabled = true;
+          self.currentView.getChildAt(4).mouseEnabled = false;
           self.currentView.getChildAt(2).alpha = 1.0;
+          self.currentView.getChildAt(3).alpha = 1.0;
         }
       }
 
@@ -1034,6 +1039,7 @@ var Game =
         self.currentView.getChildAt(1).mouseEnabled = true;
         self.currentView.getChildAt(2).mouseEnabled = false;
         self.currentView.getChildAt(3).mouseEnabled = false;
+        self.currentView.getChildAt(4).mouseEnabled = false;
         views.textBoxInputControl.alpha = 0.0;
         views.textBoxInput.disabled = true;
         views.returnButton.alpha = 1.0;
@@ -1122,7 +1128,8 @@ var Game =
           self.currentView.getChildAt(0).mouseEnabled = false;
           self.currentView.getChildAt(1).mouseEnabled = false;
           self.currentView.getChildAt(2).mouseEnabled = false;
-          self.currentView.getChildAt(3).mouseEnabled = true;
+          self.currentView.getChildAt(3).mouseEnabled = false;
+          self.currentView.getChildAt(4).mouseEnabled = true;
           views.textBoxInputControl.alpha = 0.0;
           views.textBoxInput.disabled = true;
           views.displayMessage.alpha = 1.0;
@@ -1316,6 +1323,7 @@ var Game =
           self.currentView.getChildAt(1).mouseEnabled = false;
           self.currentView.getChildAt(2).mouseEnabled = false;
           self.currentView.getChildAt(3).mouseEnabled = false;
+          self.currentView.getChildAt(4).mouseEnabled = false;
           if (!gameOver) {
             views.textBoxInputControl.alpha = 1.0;
             views.textBoxInput.disabled = false;
@@ -3532,6 +3540,7 @@ var Game =
         self.currentView.getChildAt(1).mouseEnabled = false;
         self.currentView.getChildAt(2).mouseEnabled = false;
         self.currentView.getChildAt(3).mouseEnabled = false;
+        self.currentView.getChildAt(4).mouseEnabled = false;
         if (!gameOver) {
           views.textBoxInputControl.alpha = 1.0;
           views.textBoxInput.disabled = false;
@@ -3545,7 +3554,9 @@ var Game =
         self.currentView.getChildAt(1).mouseEnabled = false;
         self.currentView.getChildAt(2).mouseEnabled = false;
         self.currentView.getChildAt(3).mouseEnabled = false;
+        self.currentView.getChildAt(4).mouseEnabled = false;
         self.currentView.getChildAt(2).alpha = 0.0;
+        self.currentView.getChildAt(3).alpha = 0.0;
       }
 
       /****************
@@ -4972,7 +4983,8 @@ var Game =
         self.currentView.getChildAt(0).mouseEnabled = false;
         self.currentView.getChildAt(1).mouseEnabled = false;
         self.currentView.getChildAt(2).mouseEnabled = true;
-        self.currentView.getChildAt(3).mouseEnabled = false;
+        self.currentView.getChildAt(3).mouseEnabled = true;
+        self.currentView.getChildAt(4).mouseEnabled = false;
         views.deleteButton.alpha = 0.0;
         views.textBoxInputControl.alpha = 0.0;
         views.textBoxError.alpha = 0.0;
