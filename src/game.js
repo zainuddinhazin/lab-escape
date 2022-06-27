@@ -333,7 +333,7 @@ var Game =
         };
       } else {
         quit = function () {
-          window.location = "http://www.wisc-online.com";
+          window.location = "https://zainuddinhazin.github.io/lab-escape";
         };
       }
 
@@ -1422,7 +1422,7 @@ var Game =
         restartButton.on("click", restartMouseClick);
         reviewButton.cursor = "pointer";
         restartButton.cursor = "pointer";
-        if (isLmsConnected || isMobileDevice) {
+        // if (isLmsConnected || isMobileDevice) {
           var exitButton = new createjs.Bitmap(
             resourceLoader.getResult("exitYellowBtn")
           );
@@ -1439,7 +1439,7 @@ var Game =
           exitButton.on("click", quit);
           exitButton.cursor = "pointer";
           gameOverContainer.addChild(exitButton, exitText);
-        }
+        // }
         view.addChild(background, gameOverContainer);
         return view;
       }
