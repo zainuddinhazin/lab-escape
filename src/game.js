@@ -1810,7 +1810,7 @@ var Game =
         );
         var overviewText = new createjs.Text(
           "",
-          "bold 16px Arial Black",
+          "bold 14px Arial Black",
           "#040707"
         );
         var panText = new createjs.Text(
@@ -2110,7 +2110,7 @@ var Game =
         returnContainer.alpha = 0.0;
         views.returnButton = returnContainer;
         overviewText.text =
-          "A puzzle consisting of a grid of squares and blanks into which words crossing vertically and horizontally are written according to clues";
+          "A puzzle consisting of a grid of squares and blanks into which words crossing vertically and horizontally are written according to clues. All the answers have something to do with the subject of anatomy and the human body.";
         overviewSeparatorHeader.graphics
           .setStrokeStyle(5)
           .beginStroke("#040707")
@@ -2123,7 +2123,7 @@ var Game =
         overviewSeparatorHeader.y = bounds.y + bounds.height + 3;
         overviewText.y = overviewSeparatorHeader.y + 7;
         bounds = overviewText.getTransformedBounds();
-        overviewFooterText.y = bounds.y + bounds.height + 50;
+        overviewFooterText.y = bounds.y + bounds.height + 75;
         bounds = overviewFooterText.getTransformedBounds();
         overviewSeparatorFooter.y = bounds.y + bounds.height + 3;
         overviewText.maxWidth = 550;
